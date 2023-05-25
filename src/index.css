@@ -25,16 +25,17 @@ header {
   align-items: center;
 }
 header nav {
-  width: 100%;
+  width: 100vw;
   min-height: 90px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   transition: all 0.5s ease;
   z-index: 1;
   padding: 20px 120px;
+  overflow-y: hidden;
 }
 .nav.active {
   position: fixed;
@@ -71,7 +72,7 @@ nav .open {
 }
 .header-main {
   width: auto;
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -266,4 +267,95 @@ nav .open {
   font-size: 40px;
   color: #191641;
   margin-bottom: 20px;
+}
+.footer{
+  width: 100%;
+  min-height: 90px;
+  padding: 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer p a{
+  text-decoration: underline !important;
+  transition: all 0.3s ease;
+  color: #000;
+}
+.social-media-footer a{
+  font-size: 24px;
+  color: #191641;
+  padding: 0px 10px;
+}
+.footer p a:hover{
+  text-decoration: none !important;
+  color: #000;
+}
+
+/* Media */
+
+@media (max-width: 770px) {
+  header nav, nav.active{
+    height: 60px;
+    padding: 20px 35px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+  }
+  header nav img {
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+  }
+  header nav ul{
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    background-color: transparent;
+  }
+  nav ul li{
+    margin: 7px 0px;
+  }
+  nav .open{
+    display: block;
+  }
+  nav.full{
+    height: 220px;
+  }
+  .main-img-item{
+    width: 400px;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  .main-img-item{
+    width: 310px;
+  }
+  .main-img-item h1{
+    font-size: 30px;
+  }
+  .main-img-social-buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: -10%;
+    left: 16%;
+  }
+  .main-img img {
+    width: 320px;
+    height: 320px;
+  }
+  .about-img img{
+    width: 320px;
+    height: 320px;
+  }
+  .about-textbox{
+    margin: 0;
+    align-items: center;
+  }
+  .social-media-footer{
+    padding: 20px 0 ;
+  }
 }

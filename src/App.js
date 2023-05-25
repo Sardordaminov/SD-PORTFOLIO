@@ -2,6 +2,7 @@ import AboutMe from "./components/AboutMe";
 import Header from "./components/Header";
 import Topprojects from "./components/Topprojects";
 import Projects from './components/Projects'
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
       <Topprojects topprojects={topprojects}/>
       <AboutMe />
       <Projects projects={projects}/>
+      <Footer />
     </div>
   );
 }
