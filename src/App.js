@@ -9,9 +9,9 @@ function App() {
   const topprojects = [
     {
       id: 1,
-      title: 'Counting Animation',
-      img: 'counting.png',
-      project: "https://counting-animation.vercel.app/"
+      title: 'Zamondosh Print',
+      img: 'zamondosh.png',
+      project: "https://zamondosh-print.vercel.app/"
     },
     {
       id: 2,
@@ -66,11 +66,11 @@ function App() {
   ]
   return (
     <div className="wrapper">
-      <Header/>
-      <Topprojects topprojects={topprojects}/>
+      <Header />
+      <Topprojects topprojects={topprojects} />
       <AboutMe />
-      <Projects projects={projects}/>
-      <Footer />
+      <Projects projects={projects} />
+      <Footer /> 
     </div>
   );
 }
