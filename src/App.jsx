@@ -70,7 +70,7 @@ function App() {
       <Topprojects topprojects={topprojects} />
       <AboutMe />
       <Projects projects={projects} />
-      <Footer /> 
+      <Footer />
     </div>
   );
 }
