@@ -1,41 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { BsYoutube, BsInstagram } from 'react-icons/bs'
-import { FaTelegram, FaAngleDoubleUp } from "react-icons/fa"
-import { RxHamburgerMenu } from "react-icons/rx"
+import { FaTelegram } from "react-icons/fa"
 
-const Header = (props) => {
-    const [nav, setNav] = useState(false)
-    const [open, setOpen] = useState(false)
-    const [totop, setTotop] = useState(false)
-
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 1) {
-                setNav(true);
-                setTotop(true)
-            } else {
-                setNav(false);
-                setTotop(false)
-            }
-        });
-    }, []);
-    const toTop = () => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-
+const Header = () => {
     return (
         <header>
-            <div onClick={toTop} className={`to-top ${totop && "active"}`}><FaAngleDoubleUp /></div>
-            <nav className={`nav ${nav && "active"} ${open && "full"}`}>
-                <a href='Header.js'><img className='logo-img' src='./img/logo.png' alt='logo' /></a>
-                <ul>
-                    <li>Asosiy</li>
-                    <li>Men Haqimda</li>
-                    <li>Loyihalar</li>
-                </ul>
-                <RxHamburgerMenu className='open' onClick={() => { setOpen(!open) }} />
-            </nav>
             <div className='header-main'>
                 <div className='main-img-item'>
                     <h1>Salom! Men Daminov Sardorbekman</h1>
