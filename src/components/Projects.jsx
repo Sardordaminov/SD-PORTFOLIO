@@ -1,5 +1,5 @@
 import React from 'react'
-import Projectcard from './projectCard/Projectcard'
+import Projectcard from './projectCard/ProjectCard'
 const Projects = (props) => {
   return (
     <div className='projects'>
